@@ -15,18 +15,18 @@ ColumnLayout {
     RowLayout {
         RadioButton {
             text: qsTr("From text")
-            checked: root.state.key_type === 0
-            onClicked: root.state.key_type = 0
+            checked: settings.key_type === 0
+            onClicked: settings.key_type = 0
         }
         RadioButton {
             text: qsTr("From file")
-            checked: root.state.key_type === 1
-            onClicked: root.state.key_type = 1
+            checked: settings.key_type === 1
+            onClicked: settings.key_type = 1
         }
     }
     StackLayout {
         id: keyTypeField
-        currentIndex: 0
+        currentIndex: settings.key_type
 
         TextField {
             placeholderText: qsTr("Enter key")

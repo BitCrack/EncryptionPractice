@@ -14,18 +14,18 @@ ColumnLayout {
     RowLayout {
         RadioButton {
             text: qsTr("From text")
-            checked: root.state.input_type === 0
-            onClicked: root.state.input_type = 0
+            checked: settings.input_type === 0
+            onClicked: settings.input_type = 0
         }
         RadioButton {
             text: qsTr("From file")
-            checked: root.state.input_type === 1
-            onClicked: root.state.input_type = 1
+            checked: settings.input_type === 1
+            onClicked: settings.input_type = 1
         }
     }
     StackLayout {
         id: inputTypeField
-        currentIndex: root.state.input_type
+        currentIndex: settings.input_type
 
         TextField {
             placeholderText: qsTr("Enter input")

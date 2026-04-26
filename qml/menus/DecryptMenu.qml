@@ -7,6 +7,8 @@ import xyz.bitcrack.encryption_practice
 
 RowLayout {
     id: decryptMenu
+    property QtDecryptSettings settings: root.decryptSettings
+
     spacing: 10
 
     CipherSelection {}

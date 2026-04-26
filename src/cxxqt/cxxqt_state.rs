@@ -1,4 +1,3 @@
-use core::pin::Pin;
 use cxx_qt_lib::QString;
 
 /// The Rust struct for the QObject
@@ -6,9 +5,6 @@ use cxx_qt_lib::QString;
 pub struct RState {
     lang: QString,
     cipher: QString,
-    input_type: i32,
-    key_type: i32,
-    output_type: i32,
 }
 
 impl qobject::QtState {}
@@ -30,9 +26,6 @@ pub mod qobject {
         #[qml_element]
         #[qproperty(QString, lang)]
         #[qproperty(QString, cipher)]
-        #[qproperty(i32, input_type)]
-        #[qproperty(i32, key_type)]
-        #[qproperty(i32, output_type)]
         #[namespace = "qt_state"]
         type QtState = super::RState;
     }

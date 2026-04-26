@@ -14,18 +14,40 @@ ApplicationWindow {
     visible: true
     color: palette.window
 
-    readonly property QtState state: QtState {
+    property QtState state: QtState {
         lang: "en"
         cipher: "aes128"
+    }
+
+    property QtEncryptSettings encryptSettings: QtEncryptSettings {
         input_type: 0
+        input_text: ""
+        input_filepath: ""
+
         key_type: 0
+        key_text: ""
+        key_filepath: ""
+
         output_type: 0
+        output_text: ""
+        output_filepath: ""
+    }
+
+    property QtDecryptSettings decryptSettings: QtDecryptSettings {
+        input_type: 0
+        input_text: ""
+        input_filepath: ""
+
+        key_type: 0
+        key_text: ""
+        key_filepath: ""
+
+        output_type: 0
+        output_text: ""
+        output_filepath: ""
     }
 
     ButtonGroup { id: cipher }
-    ButtonGroup { id: inputType }
-    ButtonGroup { id: keyType }
-    ButtonGroup { id: outputType }
 
     FileDialog {
         id: fileDialog

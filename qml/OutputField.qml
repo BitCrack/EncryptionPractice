@@ -15,18 +15,18 @@ ColumnLayout {
     RowLayout {
         RadioButton {
             text: qsTr("To text")
-            checked: root.state.output_type === 0
-            onClicked: root.state.output_type = 0
+            checked: settings.output_type === 0
+            onClicked: settings.output_type = 0
         }
         RadioButton {
             text: qsTr("To file")
-            checked: root.state.output_type === 1
-            onClicked: root.state.output_type = 1
+            checked: settings.output_type === 1
+            onClicked: settings.output_type = 1
         }
     }
     StackLayout {
         id: outputTypeField
-        currentIndex: 0
+        currentIndex: settings.output_type
 
         TextField {
             placeholderText: qsTr("Output")
