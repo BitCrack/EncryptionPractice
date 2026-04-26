@@ -1,4 +1,4 @@
-pub mod cxxqt_object;
+pub mod cxxqt;
 
 use cxx_qt::casting::Upcast;
 use cxx_qt_lib::{QGuiApplication, QQmlApplicationEngine, QQmlEngine, QUrl};

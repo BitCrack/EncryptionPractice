@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/bitcrack_avatar.png</file>
+        <file>assets/dragons_avatar.png</file>
+    </qresource>
+</RCC>
