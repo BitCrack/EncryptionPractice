@@ -3,8 +3,8 @@ use cxx_qt_lib::QString;
 /// The Rust struct for the QObject
 #[derive(Default)]
 pub struct RState {
-    lang: QString,
-    cipher: QString,
+    pub lang: QString,
+    pub cipher: QString,
 }
 
 impl qobject::QtState {}

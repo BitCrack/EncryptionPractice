@@ -7,6 +7,10 @@ edition = "2024"
 cxx = "1.0.95"
 cxx-qt = "0.8"
 cxx-qt-lib = { version="0.8", features = ["qt_full"] }
+ctr = "0.10.0"
+aes = "0.9.0"
+rand = "0.10.1"
+hex = "0.4.3"
 
 [build-dependencies]
 # The link_qt_object_files feature is required for statically linking Qt 6.

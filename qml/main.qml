@@ -9,7 +9,7 @@ import xyz.bitcrack.encryption_practice
 ApplicationWindow {
     id: root
     title: qsTr("Encryption Practice")
-    width: 640
+    width: 800
     height: 480
     visible: true
     color: palette.window
@@ -19,32 +19,46 @@ ApplicationWindow {
         cipher: "aes128"
     }
 
-    property QtEncryptSettings encryptSettings: QtEncryptSettings {
+    property QtEncryption encryption: QtEncryption {
         input_type: 0
         input_text: ""
         input_filepath: ""
 
-        key_type: 0
-        key_text: ""
-        key_filepath: ""
-
         output_type: 0
         output_text: ""
         output_filepath: ""
+
+        output_error: ""
+
+        // AES-x specific
+        aes_key_type: 0
+        aes_key_text: ""
+        aes_key_filepath: ""
+
+        aes_iv_type: 0
+        aes_iv_text: ""
+        aes_iv_filepath: ""
     }
 
-    property QtDecryptSettings decryptSettings: QtDecryptSettings {
+    property QtDecryption decryption: QtDecryption {
         input_type: 0
         input_text: ""
         input_filepath: ""
 
-        key_type: 0
-        key_text: ""
-        key_filepath: ""
-
         output_type: 0
         output_text: ""
         output_filepath: ""
+
+        output_error: ""
+
+        // AES-x specific
+        aes_key_type: 0
+        aes_key_text: ""
+        aes_key_filepath: ""
+
+        aes_iv_type: 0
+        aes_iv_text: ""
+        aes_iv_filepath: ""
     }
 
     ButtonGroup { id: cipher }

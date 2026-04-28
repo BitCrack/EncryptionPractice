@@ -28,9 +28,4 @@ ColumnLayout {
         checked: root.state.cipher === "aes256"
         onToggled: root.state.cipher = "aes256"
     }
-    RadioButton {
-        text: qsTr("ChaCha20")
-        checked: root.state.cipher === "chacha20"
-        onToggled: root.state.cipher = "chacha20"
-    }
 }

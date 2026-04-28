@@ -29,7 +29,8 @@ ColumnLayout {
         currentIndex: settings.output_type
 
         TextField {
-            placeholderText: qsTr("Output")
+            text: settings.output_text
+            placeholderText: "Output"
             readOnly: true
         }
         Button {

@@ -22,8 +22,8 @@ fn main() {
         .qrc("resources.qrc")
         .files([
             "src/cxxqt/cxxqt_state.rs",
-            "src/cxxqt/cxxqt_encrypt_settings.rs",
-            "src/cxxqt/cxxqt_decrypt_settings.rs"
+            "src/cxxqt/cxxqt_encryption.rs",
+            "src/cxxqt/cxxqt_decryption.rs"
         ])
         .build();
 }

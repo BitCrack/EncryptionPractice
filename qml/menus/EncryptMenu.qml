@@ -7,14 +7,17 @@ import xyz.bitcrack.encryption_practice
 
 RowLayout {
     id: encryptMenu
-    property QtEncryptSettings settings: root.encryptSettings
+    property QtEncryption settings: root.encryption
 
     spacing: 10
 
-    CipherSelection {}
+    CipherSelection {
+        Layout.preferredWidth: parent.width * 0.2
+    }
 
     ColumnLayout {
         Layout.alignment: Qt.AlignTop
+        Layout.preferredWidth: parent.width * 0.8
 
         InputField {}
         KeyField {}
@@ -24,6 +27,12 @@ RowLayout {
             Layout.fillWidth: true
             Layout.alignment: Qt.AlignBottom | Qt.AlignRight
             Layout.topMargin: 8
+            onClicked: settings.encrypt(root.state)
+        }
+        Label {
+            text: settings.output_error
+            color: "red"
+            wrapMode: Text.Wrap
         }
 
         OutputField {}

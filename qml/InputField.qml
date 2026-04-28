@@ -28,7 +28,8 @@ ColumnLayout {
         currentIndex: settings.input_type
 
         TextField {
-            placeholderText: qsTr("Enter input")
+            placeholderText: "Enter input"
+            onTextChanged: settings.input_text = text
         }
         Button {
             text: qsTr("Choose a file...")
