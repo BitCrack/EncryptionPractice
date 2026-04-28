@@ -15,7 +15,6 @@ ApplicationWindow {
     color: palette.window
 
     property QtState state: QtState {
-        lang: "en"
         cipher: "aes128"
     }
 

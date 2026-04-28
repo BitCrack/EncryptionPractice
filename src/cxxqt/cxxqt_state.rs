@@ -3,7 +3,6 @@ use cxx_qt_lib::QString;
 /// The Rust struct for the QObject
 #[derive(Default)]
 pub struct RState {
-    pub lang: QString,
     pub cipher: QString,
 }
 
@@ -24,7 +23,6 @@ pub mod qobject {
         // based on the Rust struct MyObjectRust.
         #[qobject]
         #[qml_element]
-        #[qproperty(QString, lang)]
         #[qproperty(QString, cipher)]
         #[namespace = "qt_state"]
         type QtState = super::RState;

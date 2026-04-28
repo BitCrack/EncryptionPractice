@@ -16,43 +16,21 @@ RowLayout {
         spacing: 12
 
         Button {
-            text: qsTr("Language")
+            text: qsTr("Credits")
             Layout.fillWidth: true
             onClicked: settingsPage.currentIndex = 0
         }
 
         Button {
-            text: qsTr("Credits")
-            Layout.fillWidth: true
-            onClicked: settingsPage.currentIndex = 1
-        }
-
-        Button {
             text: qsTr("About")
             Layout.fillWidth: true
-            onClicked: settingsPage.currentIndex = 2
+            onClicked: settingsPage.currentIndex = 1
         }
     }
     StackLayout {
         id: settingsPage
         currentIndex: 0
 
-        ColumnLayout {
-            Label {
-                text: qsTr("Language")
-                font.pixelSize: 24
-                Layout.fillWidth: true
-            }
-            RadioButton {
-                checked: true
-                text: qsTr("English")
-                onToggled: root.state.lang = "en"
-            }
-            RadioButton {
-                text: qsTr("Polski")
-                onToggled: root.state.lang = "pl"
-            }
-        }
         ColumnLayout {
             Label {
                 text: qsTr("Credits")
